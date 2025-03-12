@@ -21,7 +21,7 @@ def ask_chatgpt(conditions, temperature):
     prompt = (f"The weather forecast is {conditions} with a temperature of {temperature}°C. "
               "Should I take an umbrella? Provide a detailed response explaining your recommendation.")
     
-    client = openai.OpenAI(api_key="OpenAI_API")
+    client = openai.OpenAI(api_key=OPENAI_API_KEY)
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": prompt}]
