@@ -36,7 +36,7 @@ def get_weather():
 
     timestamp = datetime.now(timezone.utc)
     current_date = date.today()
-    location = request.args.get('location', 'New York')
+    location = request.args.get('location', 'Kyiv')
     start_date = request.args.get("start_date", str(current_date))
     end_date = request.args.get("end_date", start_date)
     unit_group = request.args.get('unitGroup', 'metric')  
